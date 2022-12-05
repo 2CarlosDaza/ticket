@@ -1,5 +1,7 @@
 package com.parking.ticket.model.entity;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name = "person")
+@Table(name = " parking_lot")
 @Entity
 @Data
 @NoArgsConstructor
@@ -19,9 +21,9 @@ public class ParkingLotEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String hourValue;
-	private String dayValue;
-	private Integer weekValue;
+	private BigDecimal hourValue;
+	private BigDecimal dayValue;
+	private BigDecimal weekValue;
 	private Integer typeId;
 	private Boolean  active;
 	private Integer stateId;
