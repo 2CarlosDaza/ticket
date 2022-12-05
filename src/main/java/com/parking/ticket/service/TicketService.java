@@ -10,4 +10,6 @@ public interface TicketService {
 	Optional<TicketEntity> getTicketById(Integer id);
 	TicketEntity saveTicket(TicketEntity u);
 	boolean deleteTicketById(Integer id);
+	TicketEntity liquidateTicket(Integer id);
+	TicketEntity payTicket(Integer id);
 }

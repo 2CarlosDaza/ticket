@@ -34,12 +34,12 @@ public class TicketController {
 	@PostMapping("/liquidate/{id}")
 	public TicketEntity liquidate(
 			@PathVariable("id") Integer id) {	
-		return null;//service.saveTicket(ticket);
+		return service.liquidateTicket(id);
 	}
 	@PostMapping("/pay/{id}")
 	public TicketEntity pay(
 			@PathVariable("id") Integer id) {	
-		return null;// service.saveTicket(ticket);
+		return service.payTicket(id);
 	}
 	@GetMapping("/find/{id}")
 	public Optional<TicketEntity> getTicketById(
